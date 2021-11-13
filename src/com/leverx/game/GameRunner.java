@@ -5,6 +5,10 @@ import com.leverx.game.classes.impl.TicTacGameContextImpl;
 
 /**
  * Launches the game
+ *
+ * @author Igor Rabcew
+ * @version 0.1
+ * @since 0.1
  */
 public class GameRunner {
 
