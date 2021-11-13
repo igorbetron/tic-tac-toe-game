@@ -26,6 +26,12 @@ public class TicTacGameAnalyzerImpl implements GameAnalyzer {
     }
   }
 
+  /**
+   * Analyzes cols, rows and diagonal for next game step or display winner
+   *
+   * @param gameArea current game area with elements
+   * @return defined game state
+   */
   private GameState defineWinner(GameArea gameArea) {
     AreaElement[][] currentGameArea = gameArea.getArea();
 
@@ -56,6 +62,12 @@ public class TicTacGameAnalyzerImpl implements GameAnalyzer {
     return GameState.IN_PROGRESS;
   }
 
+  /**
+   * Analyze only right diagonal of game area
+   *
+   * @param currentGameArea current game area
+   * @return game state IN_PROGRESS,X_WON or Y_WON
+   */
   private GameState analyzeRightDiagonal(AreaElement[][] currentGameArea) {
     int ticCounter = 0;
     int tacCounter = 0;
@@ -80,6 +92,12 @@ public class TicTacGameAnalyzerImpl implements GameAnalyzer {
     return GameState.IN_PROGRESS;
   }
 
+  /**
+   * Analyze only left diagonal of game area
+   *
+   * @param currentGameArea current game area
+   * @return game state IN_PROGRESS,X_WON or Y_WON
+   */
   private GameState analyzeLeftDiagonal(AreaElement[][] currentGameArea) {
     int ticCounter = 0;
     int tacCounter = 0;
@@ -108,6 +126,12 @@ public class TicTacGameAnalyzerImpl implements GameAnalyzer {
     return GameState.IN_PROGRESS;
   }
 
+  /**
+   * Analyze only cols of game area
+   *
+   * @param currentGameArea current game area
+   * @return game state IN_PROGRESS,X_WON or Y_WON
+   */
   private GameState analyzeCols(AreaElement[][] currentGameArea) {
     int ticCounter = 0;
     int tacCounter = 0;
@@ -136,6 +160,12 @@ public class TicTacGameAnalyzerImpl implements GameAnalyzer {
     return GameState.IN_PROGRESS;
   }
 
+  /**
+   * Analyze only rows of game area
+   *
+   * @param currentGameArea current game area
+   * @return game state IN_PROGRESS, X_WON or Y_WON
+   */
   private GameState analyzeRows(AreaElement[][] currentGameArea) {
     int ticCounter = 0;
     int tacCounter = 0;
